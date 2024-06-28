@@ -1,0 +1,30 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .inter {
+    @apply font-inter font-normal non-italic
+            font-variation-settings: 'slnt'0;
+  }
+  .social-link {
+    @apply relative flex items-center justify-center
+            h-12 w-72 mt-2 mb-2 mx-auto shadow-lg
+            text-white text-center text-sm
+            font-inter 
+            bg-grey rounded-md
+            hover:bg-primary hover:text-offblack hover:cursor-pointer;
+  }
+}
